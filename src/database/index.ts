@@ -6,6 +6,6 @@ export function connect() {
 	// if (dev !== "") {
 	// return postgres(Deno.env.get("DATABASE_URL") ?? "");
 	// }
-	const sql = postgres(Deno.env.get("DATABASE_URL") ?? "", { ssl: false });
+	const sql = postgres(Deno.env.get("DATABASE_URL") ?? "", { ssl: "require" });
 	return sql;
 }
